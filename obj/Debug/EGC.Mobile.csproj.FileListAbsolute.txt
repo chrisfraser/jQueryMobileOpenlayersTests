@@ -1,0 +1,5 @@
+c:\Users\chris fraser.enerserv\documents\visual studio 2012\Projects\EGC\EGC.Mobile\bin\EGC.Mobile.dll
+c:\Users\chris fraser.enerserv\documents\visual studio 2012\Projects\EGC\EGC.Mobile\bin\EGC.Mobile.pdb
+c:\Users\chris fraser.enerserv\documents\visual studio 2012\Projects\EGC\EGC.Mobile\obj\Debug\EGC.Mobile.csprojResolveAssemblyReference.cache
+c:\Users\chris fraser.enerserv\documents\visual studio 2012\Projects\EGC\EGC.Mobile\obj\Debug\EGC.Mobile.dll
+c:\Users\chris fraser.enerserv\documents\visual studio 2012\Projects\EGC\EGC.Mobile\obj\Debug\EGC.Mobile.pdb

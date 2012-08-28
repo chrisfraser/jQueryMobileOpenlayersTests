@@ -1,0 +1,200 @@
+﻿<!--
+    jQuery Mobile Boilerplate
+    index.html
+    -->
+<!doctype html>
+<html>
+    <head>
+        <title> jQuery Mobile Boilerplate </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+
+        <!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+        <!-- For iPhone 4 with high-resolution Retina display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon.png">
+        <!-- For first-generation iPad: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon.png">
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+        <!-- For nokia devices and desktop browsers : -->
+        <link rel="shortcut icon" href="favicon.ico" />
+	
+        <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+        <meta http-equiv="cleartype" content="on">
+
+        <!-- jQuery Mobile CSS bits -->
+        <link rel="stylesheet" href="Content/jquery.mobile-1.1.1.min.css" />
+
+        <!-- Custom css -->
+        <link rel="stylesheet" href="Content/custom.css" />
+
+        <!-- Javascript includes -->
+        <script src="phonegap.js"> </script>
+        <script src="Scripts/jquery-1.8.0.min.js"> </script>
+        <script src="Scripts/mobileinit.js"> </script>
+        <script src="Scripts/ios-orientationchange-fix.min.js"> </script>
+        <script src="Scripts/jquery.mobile-1.1.1.min.js"> </script>
+        <script src="Scripts/TabBar.js"> </script>
+        <script src="Scripts/application.js"> </script>
+        <!-- Add a Bookmark Bubble for iDevices, and adds a cookie if already shown -->
+        <script type="text/javascript" src="Scripts/bookmark_bubble.js"> </script>
+        <script type="text/javascript" src="Scripts/example.js"> </script>
+        <script src="Scripts/jquery.cookie.js"> </script>
+        <!-- Startup Images for iDevices -->
+        <script> (function() {var a;if (navigator.platform === "iPad") {a = window.orientation !== 90 || window.orientation === -90 ? "images/startup-tablet-landscape.png" : "images/startup-tablet-portrait.png"} else {a = window.devicePixelRatio === 2 ? "images/startup-retina.png" : "images/startup.png"}document.write('<link rel="apple-touch-startup-image" href="' + a + '"/>')})() </script>
+        <!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+        <script> (function(a, b, c) {if (c in b && b[c]) {var d, e = a.location, f = /^(a|html)$/i;a.addEventListener("click", function(a) {d = a.target;while (!f.test(d.nodeName)) d = d.parentNode;"href" in d && (d.href.indexOf("http") || ~d.href.indexOf(e.host)) && (a.preventDefault(), e.href = d.href)}, !1)}})(document, window.navigator, "standalone") </script>
+    </head> 
+    <body> 
+        <!-- Home -->
+        <div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Home
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 0px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Menu
+                    </li>
+                    <li data-theme="c">
+                        <a href="#login" data-transition="slide">
+                            Login
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#map" data-transition="slide">
+                            Map
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#map" data-transition="slide">
+                            Captured
+                            <span class="ui-li-count">
+                                3
+                            </span>
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#info" data-transition="slide">
+                            Info
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Login -->
+        <div data-role="page" id="login">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-inline="true" data-direction="reverse" data-rel="back"
+                   data-transition="fade" data-theme="b" href="#page1" data-icon="home" data-iconpos="notext"
+                   class="ui-btn-left">
+                    Button
+                </a>
+                <h3>
+                    Login
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textinput3">
+                            User Name
+                        </label>
+                        <input name="UserName" id="textinput3" placeholder="" value="" type="text">
+                    </fieldset>
+                </div>
+                <form action="">
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup">
+                            <label for="textinput2">
+                                Password
+                            </label>
+                            <input name="" id="textinput2" placeholder="" value="" type="password">
+                        </fieldset>
+                    </div>
+                    <input value="Submit" type="submit">
+                </form>
+            </div>
+        </div>
+        <!-- Map -->
+        <div data-role="page" id="map">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-inline="true" data-transition="fade" href="#info"
+                   data-icon="info" data-iconpos="notext" class="ui-btn-right">
+                </a>
+                <a data-role="button" data-inline="true" data-direction="reverse" data-rel="back"
+                   data-transition="fade" data-theme="b" href="#home" data-icon="home" data-iconpos="notext"
+                   class="ui-btn-left">
+                </a>
+                <a data-role="button" data-inline="true" data-direction="reverse" data-rel="back"
+                   data-transition="fade" href="#home" data-icon="search" data-iconpos="notext"
+                   class="ui-btn-right" style="margin-right: 30px;">
+                </a>
+                <h3>
+                    Map
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 0px">
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison,%20WI&amp;zoom=14&amp;size=320x200&amp;markers=Madison,%20WI&amp;sensor=false"
+                     height="200" width="320">
+            </div>
+            <div data-role="tabbar" data-iconpos="left" data-theme="a">
+                <ul>
+                    <li>
+                        <a href="#" data-theme="" data-icon="search">
+                            Nav
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-theme="" data-icon="star">
+                            Point
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-theme="" data-icon="grid">
+                            Area
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-theme="" data-icon="check">
+                            Edit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Info -->
+        <div data-role="page" id="info">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <a data-role="button" data-inline="true" data-direction="reverse" data-rel="back"
+                   data-transition="fade" href="#page5" data-icon="arrow-l" data-iconpos="notext"
+                   class="ui-btn-left">
+                    Button
+                </a>
+                <h3>
+                    Info
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <h2>
+                    Device Info
+                </h2>
+                <div>
+                    <p>
+                        <b>
+                            Device Info Goes Here
+                            <br>
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
